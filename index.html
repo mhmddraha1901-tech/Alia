@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Alia Siti Hazar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-pink: #ff85a2;
+            --dark-pink: #d15d78;
+            --soft-pink: #fbc2eb;
+            --bg-pink: #fff0f3;
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: var(--bg-pink);
+            color: #4a4a4a;
+            overflow-x: hidden;
+            background-image: radial-gradient(#ffcad4 0.5px, transparent 0.5px);
+            background-size: 20px 20px;
+        }
+
+        /* Pita Style */
+        .ribbon {
+            position: relative;
+            background: var(--primary-pink);
+            color: white;
+            padding: 12px 30px;
+            display: inline-block;
+            margin-top: 10px;
+            border-radius: 4px;
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.6rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            z-index: 5;
+        }
+
+        .ribbon:before, .ribbon:after {
+            content: '';
+            position: absolute;
+            border-style: solid;
+            bottom: -10px;
+        }
+
+        .ribbon:before {
+            left: 10px;
+            border-width: 10px 10px 0 0;
+            border-color: var(--dark-pink) transparent transparent transparent;
+        }
+
+        /* Animasi Bunga Tulip */
+        .tulip-container {
+            position: fixed;
+            bottom: -10px;
+            pointer-events: none;
+            z-index: 50;
+        }
+
+        .tulip-left { left: 8%; }
+        .tulip-right { right: 8%; }
+
+        @keyframes sway {
+            0% { transform: rotate(-8deg); }
+            50% { transform: rotate(8deg); }
+            100% { transform: rotate(-8deg); }
+        }
+
+        .tulip {
+            width: 100px;
+            height: auto;
+            animation: sway 4s ease-in-out infinite;
+            transform-origin: bottom center;
+        }
+
+        /* Card Style */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border: 2px solid white;
+            border-radius: 24px;
+            box-shadow: 0 10px 40px rgba(255, 133, 162, 0.15);
+            transition: all 0.3s ease;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 45px rgba(255, 133, 162, 0.25);
+        }
+
+        .section-title {
+            color: var(--primary-pink);
+            font-weight: 700;
+            border-bottom: 2px dashed var(--soft-pink);
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.25rem;
+        }
+
+        /* Profile Image */
+        .profile-container {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+        }
+
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 6px solid white;
+            box-shadow: 0 6px 20px rgba(255, 133, 162, 0.3);
+            object-fit: cover;
+            background-color: #ffdce3;
+        }
+
+        .floating {
+            animation: floating 5s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+            0%, 100% { transform: translateY(0) rotate(0); }
+            50% { transform: translateY(-15px) rotate(2deg); }
+        }
+
+        .skill-badge {
+            background: linear-gradient(135deg, #ff85a2, #fbc2eb);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-10">
+
+    <!-- Tulip Animasi Kiri -->
+    <div class="tulip-container tulip-left">
+        <svg class="tulip" viewBox="0 0 100 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M50 150V80" stroke="#66BB6A" stroke-width="5"/>
+            <path d="M50 120C30 110 20 90 20 90" stroke="#66BB6A" stroke-width="4"/>
+            <path d="M50 80C50 80 20 70 20 40C20 10 50 0 50 0C50 0 80 10 80 40C80 70 50 80 50 80Z" fill="#ff85a2"/>
+            <path d="M50 80C50 80 35 75 35 45C35 25 50 15 50 15V80Z" fill="#ff4d7a"/>
+        </svg>
+    </div>
+
+    <!-- Tulip Animasi Kanan -->
+    <div class="tulip-container tulip-right">
+        <svg class="tulip" viewBox="0 0 100 150" fill="none" xmlns="http://www.w3.org/2000/svg" style="animation-delay: -2s;">
+            <path d="M50 150V80" stroke="#66BB6A" stroke-width="5"/>
+            <path d="M50 130C70 120 80 100 80 100" stroke="#66BB6A" stroke-width="4"/>
+            <path d="M50 80C50 80 20 70 20 40C20 10 50 0 50 0C50 0 80 10 80 40C80 70 50 80 50 80Z" fill="#ffb7c5"/>
+            <path d="M50 80C50 80 35 75 35 45C35 25 50 15 50 15V80Z" fill="#ff85a2"/>
+        </svg>
+    </div>
+
+    <div class="max-w-5xl mx-auto">
+        <!-- Header -->
+        <header class="text-center mb-16">
+            <div class="profile-container mb-6">
+                <!-- Silahkan ganti URL di bawah ini dengan link foto asli Anda -->
+                <img src="WhatsApp Image 2026-02-08 at 17.45.52.jpeg" alt="Alia Siti Hazar" class="profile-img floating">
+                <div class="absolute -bottom-2 -right-2 bg-pink-500 text-white p-3 rounded-full shadow-lg text-xl">
+                    🌷
+                </div>
+            </div>
+            <h1 class="text-5xl md:text-6xl font-bold text-pink-600 mb-4 font-['Dancing_Script']">Alia Siti Hazar</h1>
+            <div class="ribbon">Siswi SMA Karya Pembangunan Baleendah</div>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+            
+            <!-- Sidebar / Info Dasar (4 Kolom) -->
+            <div class="md:col-span-4 space-y-6">
+                <section class="glass-card p-8">
+                    <h2 class="section-title">✨ Profil Dasar</h2>
+                    <ul class="space-y-4 text-sm">
+                        <li class="flex flex-col">
+                            <span class="text-pink-400 font-bold uppercase text-[10px] tracking-widest">Tahun Lahir</span>
+                            <span class="text-gray-700">17 Januari 2008</span>
+                        </li>
+                        <li class="flex flex-col">
+                            <span class="text-pink-400 font-bold uppercase text-[10px] tracking-widest">Nomor Telepon</span>
+                            <span class="text-gray-700">088269062504</span>
+                        </li>
+                        <li class="flex flex-col">
+                            <span class="text-pink-400 font-bold uppercase text-[10px] tracking-widest">Alamat</span>
+                            <span class="text-gray-700 italic">Kp. Babakan, Desa. Rancamanyar, Kec. Baleendah, Kab. Bandung, Prov. Jawa Barat</span>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="glass-card p-8 text-center">
+                    <h2 class="section-title justify-center">🎨 Hobi</h2>
+                    <div class="flex flex-col items-center gap-2">
+                        <div class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center text-3xl">👩‍🍳</div>
+                        <p class="font-bold text-pink-600">Memasak</p>
+                        <p class="text-xs text-gray-500 italic">"Memasak adalah seni dari hati"</p>
+                    </div>
+                </section>
+
+                <section class="glass-card p-8">
+                    <h2 class="section-title">📱 Sosial Media</h2>
+                    <a href="https://instagram.com/aliasitihazarr_" target="_blank" class="flex items-center gap-3 p-3 rounded-xl bg-gradient-to-r from-pink-50 to-white border border-pink-100 group transition-all">
+                        <span class="text-2xl group-hover:scale-125 transition-transform">📸</span>
+                        <div>
+                            <p class="text-[10px] font-bold text-gray-400 uppercase">Instagram</p>
+                            <p class="font-bold text-pink-600">@aliasitihazarr_</p>
+                        </div>
+                    </a>
+                </section>
+                
+                <section class="glass-card p-8">
+                    <h2 class="section-title">🗣️ Kemampuan Bahasa</h2>
+                    <div class="space-y-3">
+                        <div>
+                            <div class="flex justify-between text-xs mb-1">
+                                <span>Bahasa Indonesia</span>
+                                <span>100%</span>
+                            </div>
+                            <div class="w-full bg-pink-100 h-1.5 rounded-full">
+                                <div class="bg-pink-500 h-1.5 rounded-full" style="width: 100%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs mb-1">
+                                <span>Bahasa Sunda</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="w-full bg-pink-100 h-1.5 rounded-full">
+                                <div class="bg-pink-400 h-1.5 rounded-full" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs mb-1">
+                                <span>Bahasa Inggris</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="w-full bg-pink-100 h-1.5 rounded-full">
+                                <div class="bg-pink-300 h-1.5 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Konten Utama (8 Kolom) -->
+            <div class="md:col-span-8 space-y-6">
+                <section class="glass-card p-8">
+                    <h2 class="section-title">🌸 Tentang Saya</h2>
+                    <p class="leading-relaxed text-gray-700">
+                        Halo! Nama saya <strong>Alia Siti Hazar</strong>. Saya adalah seorang siswi di <strong>SMA Karya Pembangunan Baleendah</strong>. Saya memiliki kepribadian yang ceria dan sangat menikmati waktu luang saya dengan kegiatan kreatif seperti <strong>memasak</strong> hidangan lezat, <strong>menonton film</strong>, serta <strong>mendengarkan musik</strong> untuk relaksasi. Saya adalah pribadi yang senang belajar hal baru dan aktif dalam kegiatan sekolah.
+                    </p>
+                </section>
+
+                <section class="glass-card p-8">
+                    <h2 class="section-title">🎓 Riwayat Pendidikan</h2>
+                    <div class="relative border-l-2 border-pink-200 ml-3 space-y-8">
+                        <div class="relative pl-8">
+                            <div class="absolute w-4 h-4 bg-pink-500 rounded-full -left-[9px] top-1 shadow-md border-2 border-white"></div>
+                            <h3 class="font-bold text-pink-600">SMA Karya Pembangunan Baleendah</h3>
+                            <p class="text-sm font-semibold text-gray-500">Tahun Lulus: 2026 (Target)</p>
+                            <p class="text-xs text-gray-400 mt-1">Menempuh pendidikan menengah atas dengan fokus pada pengembangan akademik dan organisasi.</p>
+                        </div>
+                        <div class="relative pl-8">
+                            <div class="absolute w-4 h-4 bg-pink-400 rounded-full -left-[9px] top-1 shadow-md border-2 border-white"></div>
+                            <h3 class="font-bold text-gray-700">SMPN 3 Baleendah</h3>
+                            <p class="text-sm font-semibold text-gray-500">Tahun Lulus: 2023</p>
+                        </div>
+                        <div class="relative pl-8">
+                            <div class="absolute w-4 h-4 bg-pink-300 rounded-full -left-[9px] top-1 shadow-md border-2 border-white"></div>
+                            <h3 class="font-bold text-gray-700">SDN Rancamanyar 06</h3>
+                            <p class="text-sm font-semibold text-gray-500">Tahun Lulus: 2020</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="glass-card p-8">
+                    <h2 class="section-title">🤝 Pengalaman Organisasi</h2>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="p-4 bg-white rounded-2xl border border-pink-50 shadow-sm">
+                            <div class="flex items-center gap-3 mb-2">
+                                <span class="text-xl">🏛️</span>
+                                <h3 class="font-bold text-pink-600 text-sm">OSIS</h3>
+                            </div>
+                            <p class="text-xs text-gray-500">Diikuti pada saat <strong>SMA</strong>. Aktif dalam merancang dan menjalankan berbagai program kerja kesiswaan.</p>
+                        </div>
+                        <div class="p-4 bg-white rounded-2xl border border-pink-50 shadow-sm">
+                            <div class="flex items-center gap-3 mb-2">
+                                <span class="text-xl">🗣️</span>
+                                <h3 class="font-bold text-pink-600 text-sm">English Club (EC)</h3>
+                            </div>
+                            <p class="text-xs text-gray-500">Diikuti pada saat <strong>SMA</strong>. Fokus pada pengembangan komunikasi bahasa Inggris.</p>
+                        </div>
+                        <div class="p-4 bg-white rounded-2xl border border-pink-50 shadow-sm sm:col-span-2">
+                            <div class="flex items-center gap-3 mb-2">
+                                <span class="text-xl">⛺</span>
+                                <h3 class="font-bold text-pink-600 text-sm">Pramuka</h3>
+                            </div>
+                            <p class="text-xs text-gray-500">Diikuti pada saat <strong>SD</strong>. Melatih kedisiplinan dan kemandirian sejak dini.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <section class="glass-card p-8">
+                        <h2 class="section-title">🏆 Sertifikat</h2>
+                        <div class="flex flex-col items-center justify-center h-24 text-gray-400 border-2 border-dashed border-pink-100 rounded-2xl">
+                            <span class="text-2xl mb-1">📄</span>
+                            <p class="text-[10px] uppercase font-bold">Tidak ada sertifikat</p>
+                        </div>
+                    </section>
+
+                    <section class="glass-card p-8">
+                        <h2 class="section-title">⚡ Keahlian</h2>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-badge">Memasak</span>
+                            <span class="skill-badge">Manajemen Waktu</span>
+                            <span class="skill-badge">Kerja Sama Tim</span>
+                            <span class="skill-badge">Komunikasi Sunda</span>
+                        </div>
+                        <div class="mt-6 text-[10px] text-gray-400 italic">
+                            * Keahlian memasak terasah melalui hobi sehari-hari.
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <footer class="text-center mt-16 pb-24 text-pink-400 text-xs">
+            <div class="mb-2">🎀 🎀 🎀</div>
+            <p>&copy; 2024 Alia Siti Hazar. Dibuat dengan penuh cinta.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
